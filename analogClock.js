@@ -1,4 +1,4 @@
-let totalSeconds = 0; // Counts the elapsed seconds
+let totalSeconds = 0;
 
 function updateClock() {
   // Get the current time
@@ -7,20 +7,20 @@ function updateClock() {
   const minutes = now.getMinutes();
   const seconds = now.getSeconds();
 
-  // Calculate total elapsed time in seconds
+  // Calculate total time in seconds
   totalSeconds = hours * 3600 + minutes * 60 + seconds;
 
   // Convert time to degrees
-  const hourDeg = (totalSeconds / 3600) * 30; // 360 degrees / 12 hours
-  const minuteDeg = (totalSeconds / 60) * 6; // 360 degrees / 60 minutes
-  const secondDeg = totalSeconds * 6; // 360 degrees / 60 seconds
+  const hourDeg = (totalSeconds / 3600) * 30;
+  const minuteDeg = (totalSeconds / 60) * 6;
+  const secondDeg = totalSeconds * 6;
 
-  // Connect to the hand elements
+  // Connect to the pointer elements
   const hourHand = document.querySelector(".hour-hand");
   const minuteHand = document.querySelector(".min-hand");
   const secondHand = document.querySelector(".second-hand");
 
-  // Rotate the hands
+  // Rotate the pointer
   hourHand.style.transform = `translateX(-50%) rotate(${hourDeg}deg)`;
   minuteHand.style.transform = `translateX(-50%) rotate(${minuteDeg}deg)`;
   secondHand.style.transform = `translateX(-50%) rotate(${secondDeg}deg)`;

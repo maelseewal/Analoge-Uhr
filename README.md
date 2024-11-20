@@ -15,3 +15,4 @@ Der Auftrag bestand darin, eine analoge Uhr zu erstellen, die ausschließlich mi
 ### Link zum Bild
 
 [**Analoge Uhr**](https://maelseewal.github.io/Analoge-Uhr/ "Link zu Analogen Uhr")
+![QR code](img/QR_code.png "QR codes")
