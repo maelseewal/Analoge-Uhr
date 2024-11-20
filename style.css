@@ -6,9 +6,6 @@ body {
   align-items: center;
   background-color: #555;
 }
-.inner-clock-face {
-  height: 400px;
-}
 .clock {
   position: relative;
   width: 400px;
@@ -19,7 +16,7 @@ body {
   background-color: #606060;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
-.inner-clock-face::after {
+.clock::after {
   content: "";
   position: absolute;
   width: 15px; /* Durchmesser des Punkts */
@@ -67,4 +64,51 @@ body {
   z-index: 3;
   top: 3%;
   left: 50%;
+}
+@media (max-width: 768px) {
+  .clock {
+    width: 300px;
+    height: 300px;
+    border: 8px solid #ffffff;
+  }
+  .clock::after {
+    width: 12px;
+    height: 12px;
+  }
+  .hour-hand {
+    width: 8px;
+    height: 130px;
+  }
+  .min-hand {
+    width: 6px;
+    height: 140px;
+  }
+  .second-hand {
+    width: 3px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clock {
+    width: 200px;
+    height: 200px;
+    border: 6px solid #ffffff;
+  }
+  .clock::after {
+    width: 8px;
+    height: 8px;
+  }
+  .hour-hand {
+    width: 6px;
+    height: 85px;
+  }
+  .min-hand {
+    width: 4px;
+    height: 92px;
+  }
+  .second-hand {
+    width: 2px;
+    height: 97px;
+  }
 }
