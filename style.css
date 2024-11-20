@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #555;
+}
+.inner-clock-face {
+  height: 400px;
+}
+.clock {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border: 10px solid #ffffff;
+  border-radius: 50%;
+  margin: 50px auto;
+  background-color: #606060;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+.inner-clock-face::after {
+  content: "";
+  position: absolute;
+  width: 15px; /* Durchmesser des Punkts */
+  height: 15px; /* Durchmesser des Punkts */
+  background: rgb(255, 255, 255); /* Farbe des Punkts */
+  border-radius: 50%; /* Runde Form */
+  top: 50%; /* Zentrierung */
+  left: 50%; /* Zentrierung */
+  transform: translate(-50%, -50%); /* Exakte Mitte */
+  z-index: 4; /* Über den Zeigern */
+}
+
+.hand {
+  position: absolute;
+  background-color: #333;
+  transform-origin: 50% 100%;
+  transition: 0s linear;
+  border-radius: 10px;
+}
+
+.hour-hand {
+  width: 10px;
+  height: 170px;
+  border-radius: 10px;
+  background-color: #b9b9b9;
+  z-index: 1;
+  top: 8%;
+  left: 50%;
+  transform-origin: 50% 100%;
+}
+
+.min-hand {
+  width: 8px;
+  height: 180px;
+  background-color: #8b8b8b;
+  z-index: 2;
+  top: 5%;
+  left: 50%;
+}
+
+.second-hand {
+  width: 4px;
+  height: 190px;
+  background-color: rgb(255, 67, 67);
+  z-index: 3;
+  top: 3%;
+  left: 50%;
+}
