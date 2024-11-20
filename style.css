@@ -4,7 +4,11 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background-color: #555;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 40%,
+    rgb(105, 105, 105) 100%
+  );
 }
 .clock {
   position: relative;
@@ -14,19 +18,22 @@ body {
   border-radius: 50%;
   margin: 50px auto;
   background-color: #606060;
-  box-shadow: 0 0 90px rgba(234, 234, 234, 0.5);
+  box-shadow: 0 0 90px rgba(0, 0, 0, 0.9);
+  background-image: url(img/rolex.jpg);
+  background-position: center;
+  background-size: cover;
 }
 .clock::after {
   content: "";
   position: absolute;
-  width: 15px; /* Durchmesser des Punkts */
-  height: 15px; /* Durchmesser des Punkts */
-  background: rgb(255, 255, 255); /* Farbe des Punkts */
-  border-radius: 50%; /* Runde Form */
-  top: 50%; /* Zentrierung */
-  left: 50%; /* Zentrierung */
-  transform: translate(-50%, -50%); /* Exakte Mitte */
-  z-index: 4; /* Über den Zeigern */
+  width: 15px;
+  height: 15px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
 }
 
 .hand {
@@ -64,50 +71,40 @@ body {
   z-index: 3;
   top: 3%;
   left: 50%;
+  transition: 0.5s cubic-bezier(1, 0.99, 0, -0.02);
 }
-/*? Display the hour markings ?*/
+/* Show houres mark(fixed by Mael) */
 .marking {
   position: absolute;
   width: 2%;
   height: 35%;
-  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 33%,
+    rgba(0, 0, 0, 0) 34%
+  );
   top: 15%;
   left: 49.25%;
   transform-origin: center bottom;
   border-radius: 2px;
 }
 
-.adjustMarking {
-  position: absolute;
-  width: 3%;
-  height: 27.5%;
-  background: #606060;
-  top: 22.5%;
-  left: 49%;
-  transform-origin: center bottom;
-}
-
-/*? Display the minute markings ?*/
+/* Show minute mark(fixed by Mael) */
 .minute-marking {
   z-index: 0;
   position: absolute;
   width: 1%;
   height: 34.5%;
-  background: rgb(165, 165, 165);
+  background: linear-gradient(
+    180deg,
+    rgb(145, 145, 145) 10%,
+    rgba(0, 0, 0, 0) 10%
+  );
   top: 15.55%;
   left: 49.5%;
   transform-origin: center bottom;
 }
 
-.adjustMinuteMarking {
-  position: absolute;
-  width: 2.1%;
-  height: 32.5%;
-  background: #606060;
-  top: 17.5%;
-  left: 49.25%;
-  transform-origin: center bottom;
-}
 .marking-one {
   display: none;
 }
