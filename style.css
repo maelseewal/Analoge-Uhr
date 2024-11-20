@@ -14,7 +14,7 @@ body {
   border-radius: 50%;
   margin: 50px auto;
   background-color: #606060;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 90px rgba(234, 234, 234, 0.5);
 }
 .clock::after {
   content: "";
@@ -65,6 +65,62 @@ body {
   top: 3%;
   left: 50%;
 }
+/*? Display the hour markings ?*/
+.marking {
+  position: absolute;
+  width: 2%;
+  height: 35%;
+  background: rgb(255, 255, 255);
+  top: 15%;
+  left: 49.25%;
+  transform-origin: center bottom;
+  border-radius: 2px;
+}
+
+.adjustMarking {
+  position: absolute;
+  width: 3%;
+  height: 27.5%;
+  background: #606060;
+  top: 22.5%;
+  left: 49%;
+  transform-origin: center bottom;
+}
+
+/*? Display the minute markings ?*/
+.minute-marking {
+  z-index: 0;
+  position: absolute;
+  width: 1%;
+  height: 34.5%;
+  background: rgb(165, 165, 165);
+  top: 15.55%;
+  left: 49.5%;
+  transform-origin: center bottom;
+}
+
+.adjustMinuteMarking {
+  position: absolute;
+  width: 2.1%;
+  height: 32.5%;
+  background: #606060;
+  top: 17.5%;
+  left: 49.25%;
+  transform-origin: center bottom;
+}
+.marking-one {
+  display: none;
+}
+.marking-two {
+  display: none;
+}
+.marking-three {
+  display: none;
+}
+.marking-four {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .clock {
     width: 300px;
@@ -89,7 +145,7 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 350px) {
   .clock {
     width: 200px;
     height: 200px;
