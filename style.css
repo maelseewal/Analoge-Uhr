@@ -68,14 +68,13 @@ body {
 
 .second-hand {
   width: 4px;
-  height: 190px;
+  height: 189px;
   background-color: rgb(255, 67, 67);
   z-index: 3;
   top: 3%;
   left: 50%;
   transition: 0.2s cubic-bezier(0.89, 1.47, 0.64, 1.58);
 }
-/* Show houres mark(fixed by Mael) */
 .marking {
   position: absolute;
   width: 2%;
@@ -91,7 +90,6 @@ body {
   border-radius: 2px;
 }
 
-/* Show minute mark(fixed by Mael) */
 .minute-marking {
   z-index: 0;
   position: absolute;
@@ -132,11 +130,11 @@ body {
   }
   .hour-hand {
     width: 8px;
-    height: 130px;
+    height: 100px;
   }
   .min-hand {
     width: 6px;
-    height: 140px;
+    height: 115px;
   }
   .second-hand {
     width: 3px;
@@ -156,11 +154,11 @@ body {
   }
   .hour-hand {
     width: 6px;
-    height: 85px;
+    height: 67px;
   }
   .min-hand {
     width: 4px;
-    height: 92px;
+    height: 75px;
   }
   .second-hand {
     width: 2px;
