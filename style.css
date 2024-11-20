@@ -9,6 +9,8 @@ body {
     rgba(255, 255, 255, 1) 40%,
     rgb(105, 105, 105) 100%
   );
+  background-image: url(img/bg.jpg);
+  background-size: cover;
 }
 .clock {
   position: relative;
@@ -46,21 +48,21 @@ body {
 
 .hour-hand {
   width: 10px;
-  height: 170px;
+  height: 130px;
   border-radius: 10px;
   background-color: #b9b9b9;
   z-index: 1;
-  top: 8%;
+  top: 17%;
   left: 50%;
   transform-origin: 50% 100%;
 }
 
 .min-hand {
   width: 8px;
-  height: 180px;
+  height: 150px;
   background-color: #8b8b8b;
   z-index: 2;
-  top: 5%;
+  top: 12%;
   left: 50%;
 }
 
@@ -71,7 +73,7 @@ body {
   z-index: 3;
   top: 3%;
   left: 50%;
-  transition: 0.5s cubic-bezier(1, 0.99, 0, -0.02);
+  transition: 0.2s cubic-bezier(0.89, 1.47, 0.64, 1.58);
 }
 /* Show houres mark(fixed by Mael) */
 .marking {
